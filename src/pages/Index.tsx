@@ -29,10 +29,10 @@ const classes = [
     icon: 'Truck'
   },
   {
-    name: 'Капитан',
-    image: 'https://cdn.poehali.dev/projects/24141875-55cd-4df0-861b-dd6c6c0be2fc/files/96d7fb7f-a90c-4024-8b38-8a98a0cd9437.jpg',
-    description: 'Командир подразделения',
-    icon: 'Star'
+    name: 'Генерал Гавс',
+    image: 'https://cdn.poehali.dev/projects/24141875-55cd-4df0-861b-dd6c6c0be2fc/files/2dd1bbe8-eb33-46dc-bd83-b8f3dac4e44d.jpg',
+    description: 'Верховный командующий',
+    icon: 'Crown'
   }
 ];
 
