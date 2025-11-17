@@ -168,6 +168,28 @@ const Index = () => {
               <Icon name="Package" size={32} className="text-accent" />
               <h3 className="text-2xl font-oswald font-bold">Что мы предлагаем</h3>
             </div>
+            <div className="grid grid-cols-2 gap-4 mb-6">
+              <img
+                src="https://cdn.poehali.dev/projects/24141875-55cd-4df0-861b-dd6c6c0be2fc/files/50ae53fd-43f9-46cf-bf5d-ad3bb69c44ca.jpg"
+                alt="Снаряжение"
+                className="w-full h-32 object-cover rounded-lg border-2 border-accent"
+              />
+              <img
+                src="https://cdn.poehali.dev/projects/24141875-55cd-4df0-861b-dd6c6c0be2fc/files/497a2ea6-758b-4c39-8313-701c0f13ccbb.jpg"
+                alt="Техника"
+                className="w-full h-32 object-cover rounded-lg border-2 border-accent"
+              />
+              <img
+                src="https://cdn.poehali.dev/projects/24141875-55cd-4df0-861b-dd6c6c0be2fc/files/532cf4b4-5214-44b5-9815-3221b13adc6b.jpg"
+                alt="Командиры"
+                className="w-full h-32 object-cover rounded-lg border-2 border-accent"
+              />
+              <img
+                src="https://cdn.poehali.dev/projects/24141875-55cd-4df0-861b-dd6c6c0be2fc/files/e4d71169-92a9-4415-afa5-c37e29fde7e9.jpg"
+                alt="Охрана бананов"
+                className="w-full h-32 object-cover rounded-lg border-2 border-accent"
+              />
+            </div>
             <ul className="space-y-3 text-lg">
               <li className="flex items-start gap-2">
                 <span className="text-accent">✓</span>
@@ -227,17 +249,30 @@ const Index = () => {
 
         <footer className="text-center">
           <Card className="p-8 bg-card border-2 border-primary">
-            <div className="flex items-center justify-center gap-4 mb-4">
+            <div className="flex items-center justify-center gap-4 mb-6">
               <Icon name="Phone" size={32} className="text-accent" />
               <h3 className="text-3xl font-oswald font-bold">Связь с нами</h3>
             </div>
-            <a 
-              href="tel:+78005553535"
-              className="text-4xl font-oswald font-bold text-accent hover:text-secondary transition-colors"
-            >
-              +7 (800) 555-35-35
-            </a>
-            <p className="text-muted-foreground mt-4">Звонок бесплатный!</p>
+            <div className="space-y-4">
+              <div>
+                <a 
+                  href="tel:+78005553535"
+                  className="text-4xl font-oswald font-bold text-accent hover:text-secondary transition-colors"
+                >
+                  +7 (800) 555-35-35
+                </a>
+                <p className="text-muted-foreground mt-2">Первый звонок бесплатно!</p>
+              </div>
+              <div className="flex items-center justify-center gap-2 text-xl">
+                <Icon name="Mail" size={24} className="text-accent" />
+                <a 
+                  href="mailto:PochtaDlyaSpama_123@mail.ru"
+                  className="font-roboto text-accent hover:text-secondary transition-colors"
+                >
+                  PochtaDlyaSpama_123@mail.ru
+                </a>
+              </div>
+            </div>
           </Card>
         </footer>
       </div>
