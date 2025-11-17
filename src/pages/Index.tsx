@@ -7,27 +7,32 @@ const classes = [
   {
     name: 'Штурмовик',
     image: 'https://cdn.poehali.dev/projects/24141875-55cd-4df0-861b-dd6c6c0be2fc/files/5709d585-22b0-4ceb-810b-cec23a8324aa.jpg',
-    description: 'Основная боевая единица'
+    description: 'Основная боевая единица',
+    icon: 'Crosshair'
   },
   {
     name: 'Додепер',
     image: 'https://cdn.poehali.dev/projects/24141875-55cd-4df0-861b-dd6c6c0be2fc/files/c025db8b-28f5-4d87-bd73-c2782b7893a2.jpg',
-    description: 'Специалист по увороту'
+    description: 'Специалист по увороту',
+    icon: 'Zap'
   },
   {
     name: 'Оператор доставки БПЛА ДОДО',
     image: 'https://cdn.poehali.dev/projects/24141875-55cd-4df0-861b-dd6c6c0be2fc/files/d20f3c67-23d7-46a1-b00f-d17610f29bf1.jpg',
-    description: 'Пилот дронов с пиццей'
+    description: 'Пилот дронов с пиццей',
+    icon: 'Plane'
   },
   {
-    name: 'Водитель фуры с пингвинами',
+    name: 'Водитель',
     image: 'https://cdn.poehali.dev/projects/24141875-55cd-4df0-861b-dd6c6c0be2fc/files/f5569d3c-cc6c-439d-adc8-cb1a4e90fc6d.jpg',
-    description: 'Логист экзотических грузов'
+    description: 'Логист экзотических грузов',
+    icon: 'Truck'
   },
   {
-    name: 'Генерал Гавс',
+    name: 'Капитан',
     image: 'https://cdn.poehali.dev/projects/24141875-55cd-4df0-861b-dd6c6c0be2fc/files/96d7fb7f-a90c-4024-8b38-8a98a0cd9437.jpg',
-    description: 'Верховный командующий'
+    description: 'Командир подразделения',
+    icon: 'Star'
   }
 ];
 
@@ -76,6 +81,35 @@ const Index = () => {
           >
             {isSpinning ? '⏳ Проверяем документы...' : '📝 ПОДПИСАТЬ КОНТРАКТ'}
           </Button>
+        </section>
+
+        <section className="mb-16">
+          <h2 className="text-4xl font-oswald font-bold text-center mb-8 text-accent">
+            💼 Доступные классы
+          </h2>
+          <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-6">
+            {classes.map((cls) => (
+              <Card 
+                key={cls.name} 
+                className="p-6 bg-card border-2 border-primary hover:border-accent hover:scale-105 transition-all duration-300"
+              >
+                <div className="text-center">
+                  <div className="mb-4 flex justify-center">
+                    <Icon name={cls.icon as any} size={48} className="text-accent" />
+                  </div>
+                  <img
+                    src={cls.image}
+                    alt={cls.name}
+                    className="w-full h-40 object-cover rounded-lg border-2 border-accent mb-4"
+                  />
+                  <h3 className="text-xl font-oswald font-bold mb-2 text-foreground">
+                    {cls.name}
+                  </h3>
+                  <p className="text-sm text-muted-foreground">{cls.description}</p>
+                </div>
+              </Card>
+            ))}
+          </div>
         </section>
 
         {(isSpinning || selectedClass) && (
